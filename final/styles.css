@@ -7,15 +7,6 @@ body, html {
   overflow: hidden;
   font-family: 'Helvetica', sans-serif;
 }
-.avatar {
-    display: block; /* Ensures the image is displayed as a block element */
-    margin: 0 auto; /* Centers the image horizontally */
-    width: 100px; /* Adjust width as needed */
-    height: 100px; /* Adjust height as needed */
-    border-radius: 50%; /* Makes the image a circle */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for effect */
-    margin-bottom: 10px; /* Adds spacing between the avatar and the title */
-}
 
 /* Green Gradient Background */
 .main-container {
@@ -47,37 +38,23 @@ canvas {
   pointer-events: none; /* Ensures the canvas doesn't block interactions */
 }
 
-/* Map Section */
-.map-section {
-  order: 2; /* Ensures the map section appears on the right */
-  flex: 1; /* Makes the map section take up its share of space */
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* Vertically centers the map */
-  align-items: flex-end; /* Aligns the map to the right */
-  text-align: center;
-  padding: 20px;  
-  margin-right: 50px
-}
-
-/* Map Iframe */
-.map-iframe {
-  width: 90%;
-  max-width: 600px;
-  height: 90%;
-  border: 2px solid #ccc;
-  border-radius: 10px;
+/* Avatar */
+.avatar {
+  display: block;
+  margin: 0 auto;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  z-index: 2;
+  margin-bottom: 20px;
 }
 
 /* Content Section */
 .content {
-  order: 1; /* Ensures the content section appears on the left */
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Vertically centers content */
+  justify-content: center;
   align-items: center;
   text-align: center;
 }
@@ -101,49 +78,63 @@ canvas {
   color: #333;
   text-decoration: none;
   background: rgba(255, 255, 255, 0.8);
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  transition: background 0.3s, color 0.3s;
+  padding: 0.8rem 1.5rem;
+  border-radius: 15px;
+  transition: background 0.3s, color 0.3s, transform 0.3s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 .link:hover {
   background: #333;
   color: #fff;
+  transform: translateY(-3px);
 }
 
 /* Pineapple Button */
 .pineapple-button {
-  font-size: 1.5rem;
+  background: #ffe066;
   font-weight: bold;
-  color: #333;
-  padding: 0.8rem 1.2rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  text-align: center;
-  transition: background 0.3s, transform 0.2s;
-  display: inline-block;
 }
 
 .pineapple-button:hover {
-  transform: translateY(-2px); /* Slight lift effect */
-  color: #000;
-}
-.avatar {
-  display: block; /* Ensures the image is displayed as a block element */
-  margin: 0 auto; /* Centers the image horizontally */
-  width: 350px; /* Adjust width as needed */
-  height: 300px; /* Adjust height as needed */
-  border-radius: 10%; /* Makes the image a circle */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for effect */
-  margin-bottom: 10px; /* Adds spacing between the avatar and the title */
-}
-.footer {
-  position: absolute; /* Ensures the footer stays at the bottom */
-  bottom: 0;
-  width: 100%; /* Stretches the footer across the page */
-    color: #000000; /* White text for readability */
-  text-align: center; /* Center-aligns the text */
-  padding: 10px 0; /* Adds vertical padding */
-  font-size: 0.9rem; /* Slightly smaller text size */
-  z-index: 10; /* Ensures it appears above other content */
+  background: #ffcc33;
 }
 
+/* Map Section */
+.map-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  text-align: center;
+  padding: 20px;
+}
+
+.subtitle {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.map-iframe {
+  width: 90%;
+  max-width: 600px;
+  height: 90%;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 0.9rem;
+  color: #333;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
