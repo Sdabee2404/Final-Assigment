@@ -12,5 +12,8 @@
   "dependencies": {
     "three": "^0.149.0",
     "web-ifc-viewer": "^1.0.218"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.2.0"
   }
 }
